@@ -17,8 +17,8 @@ The method evaluates four candidate schedules:
 - 4→2
 - 4→4
 
-The 2-bin mode uses prediction errors {-1, 0}, while the 4-bin mode uses
-{-2, -1, 0, 1}.
+The 2-bin mode uses the prediction-error carrier set {-1, 0}, while the
+4-bin mode uses {-2, -1, 0, 1}.
 
 Each candidate schedule is evaluated using:
 
@@ -59,7 +59,7 @@ The manuscript evaluates:
 - five payload levels for each image set.
 
 For the Kodak experiments, deterministic payloads were generated using
-NumPy `default_rng` with seeds:
+NumPy `default_rng` with the following seeds:
 
 - 20260924
 - 20260925
@@ -76,10 +76,38 @@ The Standard-6 experiments used fixed pre-generated binary payload files.
 
 The benchmark images are not redistributed in this repository.
 
-Researchers should obtain their own copies of the required benchmark images
-and place them locally when running the benchmark scripts.
+### Standard grayscale images
 
-The repository provides the expected filenames and reproducibility instructions.
+The Standard-6 experiments use the following grayscale test images:
+
+- Airplane
+- Baboon
+- Barbara
+- Fishing Boat
+- Lake
+- Peppers
+
+Several of these standard test images are available from the USC-SIPI
+Image Database:
+
+https://sipi.usc.edu/database/database.php
+
+Researchers should obtain the required images from their legitimate
+public sources and use the filenames specified in the reproducibility
+instructions.
+
+### Kodak-24 images
+
+The Kodak experiments use the 24 images of the Kodak Lossless True Color
+Image Suite (`kodim01`--`kodim24`), available from:
+
+http://r0k.us/graphics/kodak/
+
+The experiments in this work use grayscale versions of the native-size
+Kodak images without resizing.
+
+The repository provides the expected filenames, grayscale-conversion
+procedure, payload-generation seeds, and benchmark instructions.
 
 ## Requirements
 
